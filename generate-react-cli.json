@@ -1,0 +1,102 @@
+{
+    "usesTypeScript": true,
+    "usesCssModule": true,
+    "cssPreprocessor": "css",
+    "testLibrary": "Testing Library",
+    "usesStyledComponents": false,
+    "component": {
+        "default": {
+            "path": "src/components",
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": true,
+            "withTest": true,
+            "withIndex": true,
+            "withMdx": false,
+            "withHook": false,
+            "withHookTest": false,
+            "customTemplates": {
+                "component": "templates/Component/TemplateName.tsx",
+                "style": "templates/Component/TemplateName.module.css",
+                "index": "templates/Component/index.ts",
+                "test": "templates/Component/TemplateName.spec.tsx"
+            }
+        },
+        "loading": {
+            "path": "src/components",
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": true,
+            "withTest": true,
+            "withIndex": true,
+            "withMdx": false,
+            "withHook": false,
+            "withHookTest": false,
+            "customTemplates": {
+                "component": "templates/Loading/TemplateName.tsx",
+                "style": "templates/Loading/TemplateName.module.css",
+                "index": "templates/Loading/index.ts",
+                "test": "templates/Loading/TemplateName.spec.tsx"
+            }
+        },
+        "feature-local": {
+            "path": "src/features",
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": false,
+            "withActionTypes": true,
+            "withContext": true,
+            "withIndex": true,
+            "withReadme": true,
+            "withSelector": true,
+            "withTest": true,
+            "withMutation": true,
+            "withMutationTest": true,
+            "customTemplates": {
+                "component": "templates/Local/Reducer.ts",
+                "actionTypes": "templates/Local/actionTypes.ts",
+                "context": "templates/Local/Context.tsx",
+                "index": "templates/Local/index.ts",
+                "readme": "templates/Local/README.md",
+                "selector": "templates/Local/useTemplateNameValue.ts",
+                "test": "templates/Local/useTemplateNameValue.spec.tsx",
+                "mutation": "templates/Local/useIncrementTemplateName.ts",
+                "mutationTest": "templates/Local/useIncrementTemplateName.spec.tsx"
+            }
+        },
+        "feature-connected": {
+            "path": "src/features",
+            "withComponent": false,
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": false,
+            "withIndex": true,
+            "withReadme": true,
+            "withGetter": true,
+            "withTest": true,
+            "withHook": true,
+            "withHookTest": true,
+            "customTemplates": {
+                "index": "templates/Connected/index.ts",
+                "readme": "templates/Connected/README.md",
+                "getter": "templates/Connected/getTemplateName.ts",
+                "hook": "templates/Connected/useTemplateName.ts",
+                "hookTest": "templates/Connected/useTemplateName.spec.tsx"
+            }
+        },
+        "page": {
+            "path": "app",
+            "withLazy": false,
+            "withStory": false,
+            "withStyle": false,
+            "withTest": false,
+            "withIndex": false,
+            "withMdx": false,
+            "withHook": false,
+            "withHookTest": false,
+            "customTemplates": {
+                "component": "templates/Page/page.tsx"
+            }
+        }
+    }
+}

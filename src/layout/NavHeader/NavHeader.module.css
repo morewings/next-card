@@ -1,0 +1,33 @@
+.navHeader {
+    align-items: center;
+    background: lightseagreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 12px 24px;
+    position: sticky;
+}
+
+.name {
+    color: white;
+    cursor: default;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
+    user-select: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 18px;
+    margin-left: auto;
+}
+
+.link {
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}

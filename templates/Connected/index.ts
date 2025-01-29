@@ -1,0 +1,1 @@
+export {useTemplateName} from './useTemplateName';

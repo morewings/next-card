@@ -1,0 +1,15 @@
+.navLink {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
+    user-select: none;
+}
+
+.active {
+    border-bottom: 2px solid white;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 66%);
+    cursor: default;
+    pointer-events: none;
+}
