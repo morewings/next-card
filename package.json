@@ -14,7 +14,6 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "analyze:build": "ANALYZE=true run-s build",
         "start": "next start",
         "lint:code": "next lint",
         "fix:code": "run-s 'lint:code --fix'",
@@ -22,14 +21,11 @@
         "fix:style": "stylelint 'src/**/*.css' --fix",
         "lint:tsc": "tsc --pretty --noEmit",
         "prepare": "is-ci || husky",
-        "test": "jest",
-        "generate:component": "npx generate-react-cli component",
-        "generate:component-loading": "npx generate-react-cli component --type=loading",
-        "generate:feature-local": "npx generate-react-cli component --type=feature-local",
-        "generate:feature-connected": "npx generate-react-cli component --type=feature-connected",
-        "generate:page": "npx generate-react-cli component --type=page"
+        "test": "jest"
     },
     "dependencies": {
+        "@next/third-parties": "^15.1.6",
+        "@phosphor-icons/react": "^2.1.7",
         "@tanstack/react-query": "5.65.1",
         "@tanstack/react-query-devtools": "5.65.1",
         "classnames": "2.5.1",
@@ -38,11 +34,11 @@
         "react": "19.0.0",
         "react-dom": "19.0.0",
         "react-omni-provider": "0.1.8",
+        "the-new-css-reset": "^1.11.3",
         "uniqid": "5.4.0"
     },
     "devDependencies": {
         "@eslint/eslintrc": "3.2.0",
-        "@next/bundle-analyzer": "15.1.6",
         "@next/eslint-plugin-next": "15.1.6",
         "@testing-library/jest-dom": "6.6.3",
         "@testing-library/react": "16.2.0",
@@ -60,7 +56,6 @@
         "eslint-config-next": "15.1.6",
         "eslint-config-prettier": "10.0.1",
         "eslint-plugin-prettier": "5.2.3",
-        "generate-react-cli": "8.4.9",
         "husky": "9.1.7",
         "is-ci": "3.0.1",
         "jest": "29.7.0",

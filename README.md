@@ -9,7 +9,7 @@
 Global state Next template (GSN) is designed for Next.js-based web applications utilizing global state and remote data sources. It includes the App Router configuration of Next.js and tests for React components, reducers, and hooks.
 
 
-Static html deployment: [Github pages](https://morewings.github.io/ts-global-state-next/)
+Static html deployment: [GitHub pages](https://morewings.github.io/ts-global-state-next/)
 
 Full-featured deployment: [Vercel](https://ts-global-state-next.vercel.app/)
 

@@ -1,0 +1,64 @@
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 12px 0;
+}
+
+.imageContainer {
+    border-radius: 50%;
+    height: 133px;
+    overflow: hidden;
+    position: relative;
+    width: 133px;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.66px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
+    white-space: nowrap;
+    width: 100%;
+}
+
+.bio {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
+}
+
+.headerLinks {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+
+    @media (pointer: coarse) {
+        gap: 24px;
+    }
+}
+
+.headerLink {
+    display: block;
+    opacity: 0.8;
+
+    @media (hover: none) {
+        opacity: 1;
+    }
+
+    &:hover,
+    &:active {
+        opacity: 1;
+    }
+
+    & .icon {
+        color: white;
+        filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 44%));
+    }
+}

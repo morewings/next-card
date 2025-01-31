@@ -80,6 +80,21 @@ export default [
              */
             '@typescript-eslint/consistent-type-imports': 'error',
             'import/no-cycle': 'error',
+            /**
+             * Allow unused variables with names stating with '_'
+             * @see https://eslint.org/docs/latest/rules/no-unused-vars
+             * @see https://typescript-eslint.io/rules/no-unused-vars/
+             */
+            '@typescript-eslint/no-unused-vars': [
+                'error',
+                {
+                    argsIgnorePattern: '^_',
+                    varsIgnorePattern: '^_',
+                    caughtErrorsIgnorePattern: '^_',
+                    ignoreRestSiblings: true,
+                    args: 'after-used',
+                },
+            ],
         },
     }),
     /* Allow devDependencies imports for tests and config files */

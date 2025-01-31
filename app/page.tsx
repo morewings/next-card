@@ -1,22 +1,19 @@
 import type {Metadata} from 'next';
 import {Fragment} from 'react';
 
-import {Counter} from '@/src/components/Counter';
-import Random from '@/src/components/Random';
-import {NavHeader} from '@/src/layout/NavHeader';
+import {Header} from '@/src/components/Header';
+import {LinksList} from '@/src/components/LinksList';
+import {config} from '@/config';
 
 export default function IndexPage() {
     return (
         <Fragment>
-            <NavHeader />
-            <main>
-                <Counter />
-                <Random />
-            </main>
+            <Header />
+            <LinksList />
         </Fragment>
     );
 }
 
 export const metadata: Metadata = {
-    title: 'First page',
+    title: config.title,
 };
