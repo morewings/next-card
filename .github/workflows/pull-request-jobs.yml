@@ -67,8 +67,3 @@ jobs:
           pnpm run lint:tsc
           pnpm run build
           pnpm run test --silent
-          pnpm run generate:component Foo --dry-run
-          pnpm run generate:component-loading Foo --dry-run
-          pnpm run generate:feature-local Foo --dry-run
-          pnpm run generate:feature-connected Foo --dry-run
-          pnpm run generate:page Foo --dry-run

@@ -58,19 +58,6 @@
         white-space: nowrap;
     }
 
-    &:hover {
-        background: rgb(255 255 255 / 80%);
-        color: black;
-
-        & .title {
-            text-shadow: none;
-        }
-
-        & svg {
-            filter: none;
-        }
-    }
-
     & .share {
         cursor: pointer;
         display: block;
@@ -87,6 +74,23 @@
 
             & svg {
                 display: none;
+            }
+        }
+    }
+
+    &:hover,
+    &:active {
+        background: rgb(255 255 255 / 80%);
+        color: black;
+
+        & .title {
+            text-shadow: none;
+        }
+
+        & .iconWrapper,
+        & .share {
+            & svg {
+                filter: none;
             }
         }
     }

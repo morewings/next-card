@@ -70,3 +70,12 @@
 .rainbow {
     animation: rainbow-animation 42s infinite linear;
 }
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    width: 100%;
+}

@@ -5,16 +5,25 @@ import {Export} from '@phosphor-icons/react/dist/ssr';
 import {sendGAEvent} from '@next/third-parties/google';
 
 import {config} from '@/config';
+import type {Config} from '@/types';
 
 import classes from './LinksList.module.css';
 import {useCanShare} from './useCanShare';
 
-export const LinksList: FC = () => {
+export type Props = {
+    mainLinks?: Config['mainLinks'];
+    gaId?: Config['gaId'];
+};
+
+export const LinksList: FC<Props> = ({
+    mainLinks = config.mainLinks,
+    gaId = config.gaId,
+}) => {
     const canShare = useCanShare();
     return (
         <div className={classes.wrapper}>
             <div className={classes.list}>
-                {config.mainLinks.map(({url, id, title, icon: Icon}) => {
+                {mainLinks.map(({url, id, title, icon: Icon}) => {
                     const handleShare = async (event: MouseEvent) => {
                         event.preventDefault();
                         if (typeof window !== undefined) {
@@ -27,7 +36,7 @@ export const LinksList: FC = () => {
                     };
 
                     const handleClick = () => {
-                        if (!!config.gaId) {
+                        if (!!gaId) {
                             sendGAEvent('event', 'link_click', {value: title});
                         }
                     };
@@ -52,6 +61,7 @@ export const LinksList: FC = () => {
                             </div>
                             <div className={classes.title}>{title}</div>
                             <button
+                                title={config.shareTitle}
                                 className={classes.share}
                                 onClick={handleShare}
                                 disabled={!canShare}>
