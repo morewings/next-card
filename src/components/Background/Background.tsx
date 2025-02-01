@@ -12,13 +12,11 @@ export type Props = {
     background?: Config['background'];
 };
 
-const getRandomBg = () => {
-    const bgList = Object.values(Backgrounds);
-    console.log('bgList', bgList, bgList[Math.floor(Math.random() * bgList.length)]);
-    return bgList[Math.floor(Math.random() * bgList.length)];
-};
-
 export const Background: FC<Props> = ({children, background = config.background}) => {
+    const getRandomBg = () => {
+        const bgList = Object.values(Backgrounds);
+        return bgList[Math.floor(Math.random() * bgList.length)];
+    };
     return (
         <div
             className={classNames(classes.background, {
