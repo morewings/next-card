@@ -1,13 +1,13 @@
 {
-    "name": "ts-global-state-next",
+    "name": "next-card",
     "version": "0.0.0",
-    "homepage": "https://morewings.github.io/ts-global-state-next/",
+    "homepage": "https://morewings.github.io/next-card/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/morewings/ts-global-state-next.git"
+        "url": "https://github.com/morewings/next-card"
     },
     "bugs": {
-        "url": "https://github.com/morewings/ts-global-state-next/issues"
+        "url": "https://github.com/morewings/next-card/issues"
     },
     "license": "MIT",
     "private": false,
