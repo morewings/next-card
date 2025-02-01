@@ -17,13 +17,18 @@ import type {Config} from '@/types';
 import image from '@/card-image.jpg';
 
 export const config: Config = {
+    // Set your or company name
     title: 'Patrick Bateman',
+    // Add a brief description to display below name
     bio: 'Specialist in mergers and acquisitions',
-    background: 'gradient',
+    // Select a background style
+    background: 'random',
     cardImage: image,
     // Set your Google Analytics id to enable
     // gaId: 'G-XXXXXXXXX',
+    // Localise sharing text
     shareTitle: 'Share link',
+    // Set icon links to contact you to display below the header
     headerLinks: [
         {
             title: 'Email',
@@ -56,6 +61,7 @@ export const config: Config = {
             icon: MessengerLogo,
         },
     ],
+    // Set main links
     mainLinks: [
         {
             id: 'cv',

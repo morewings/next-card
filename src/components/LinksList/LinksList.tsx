@@ -37,7 +37,7 @@ export const LinksList: FC<Props> = ({
 
                     const handleClick = () => {
                         if (!!gaId) {
-                            sendGAEvent('event', 'link_click', {value: title});
+                            sendGAEvent('event', 'link_click', {value: id});
                         }
                     };
 

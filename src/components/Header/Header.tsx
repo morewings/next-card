@@ -38,7 +38,7 @@ export const Header: FC<Props> = ({
                     {headerLinks.map(({id, url, icon: Icon, title: linkTitle}) => {
                         const handleClick = () => {
                             if (!!gaId) {
-                                sendGAEvent('event', 'contact_click', {value: linkTitle});
+                                sendGAEvent('event', 'contact_click', {value: id});
                             }
                         };
                         return (
