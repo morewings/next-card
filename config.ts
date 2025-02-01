@@ -14,13 +14,16 @@ import {
 } from '@phosphor-icons/react/dist/ssr';
 
 import type {Config} from '@/types';
+import image from '@/card-image.jpg';
 
 export const config: Config = {
     title: 'Dima Vyshniakov',
     bio: 'Developer and Open Source Enthusiast',
     background: 'fresh',
+    cardImage: image,
     // Set your Google Analytics id to enable
-    // gaId: 'G-XXXXXXXXXXX',
+    // gaId: 'G-XXXXXXXXX',
+    shareTitle: 'Share link',
     headerLinks: [
         {
             title: 'Email',
@@ -57,13 +60,13 @@ export const config: Config = {
         {
             id: 'cv',
             title: 'Download CV',
-            url: 'https://foo',
+            url: 'https://example.com',
             icon: FileText,
         },
         {
             id: 'calendar',
             title: 'Book a call with me',
-            url: 'https://foo',
+            url: 'https://example.com',
             icon: Calendar,
         },
         {
@@ -75,7 +78,7 @@ export const config: Config = {
         {
             id: 'linkedin',
             title: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/dvishnyakov/',
+            url: 'https://www.linkedin.com/in/userName/',
             icon: LinkedinLogo,
         },
         {
@@ -87,7 +90,7 @@ export const config: Config = {
         {
             id: 'stackoverflow',
             title: 'Stack Overflow profile',
-            url: 'https://foo',
+            url: 'https://example.com',
             icon: StackOverflowLogo,
         },
         {

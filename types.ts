@@ -1,4 +1,5 @@
 import type {Icon} from '@phosphor-icons/react';
+import type {StaticImageData} from 'next/image';
 
 export type Link = {
     title: string;
@@ -24,6 +25,8 @@ export type Config = {
     bio?: string;
     background: keyof typeof Backgrounds;
     gaId?: string;
-    headerLinks: HeaderLink[];
+    shareTitle: string;
+    cardImage?: StaticImageData;
+    headerLinks?: HeaderLink[];
     mainLinks: Link[];
 };
