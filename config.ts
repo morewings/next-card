@@ -17,9 +17,9 @@ import type {Config} from '@/types';
 import image from '@/card-image.jpg';
 
 export const config: Config = {
-    title: 'Dima Vyshniakov',
-    bio: 'Developer and Open Source Enthusiast',
-    background: 'fresh',
+    title: 'Patrick Bateman',
+    bio: 'Specialist in mergers and acquisitions',
+    background: 'gradient',
     cardImage: image,
     // Set your Google Analytics id to enable
     // gaId: 'G-XXXXXXXXX',
