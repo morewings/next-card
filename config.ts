@@ -22,7 +22,7 @@ export const config: Config = {
     // Add a brief description to display below name
     bio: 'Specialist in mergers and acquisitions',
     // Select a background style
-    background: 'random',
+    background: 'gradient',
     cardImage: image,
     // Set your Google Analytics id to enable
     // gaId: 'G-XXXXXXXXX',

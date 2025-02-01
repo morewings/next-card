@@ -36,8 +36,7 @@ Here are the available settings:
 
 - `bio`: Add a brief description to display below the name.  
 
-- `background`: Select a background style.  There are five different styles available: `fresh`, `strict`, `bold`, `gradient`, `rainbow`. You can also set `random`.
-
+- `background`: Select a background style.  There are five different styles available: `fresh`, `strict`, `bold`, `gradient`, `rainbow`.
 - `cardImage`: Set the image to be used at the header of the card.  
 
 - `gaId`: Set your Google Analytics ID to enable tracking. More later.

@@ -23,7 +23,7 @@ export enum Backgrounds {
 export type Config = {
     title: string;
     bio?: string;
-    background: keyof typeof Backgrounds | 'random';
+    background: keyof typeof Backgrounds;
     gaId?: string;
     shareTitle: string;
     cardImage?: StaticImageData;

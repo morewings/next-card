@@ -13,10 +13,6 @@ export type Props = {
 };
 
 export const Background: FC<Props> = ({children, background = config.background}) => {
-    const getRandomBg = () => {
-        const bgList = Object.values(Backgrounds);
-        return bgList[Math.floor(Math.random() * bgList.length)];
-    };
     return (
         <div
             className={classNames(classes.background, {
@@ -25,7 +21,6 @@ export const Background: FC<Props> = ({children, background = config.background}
                 [classes.strict]: background === Backgrounds.strict,
                 [classes.bold]: background === Backgrounds.bold,
                 [classes.gradient]: background === Backgrounds.gradient,
-                [classes[getRandomBg()]]: background === 'random',
             })}>
             {children}
         </div>
