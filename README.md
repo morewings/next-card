@@ -10,7 +10,7 @@ Demo: [GitHub pages](https://morewings.github.io/next-card/)
 
 ## Quick start
 
-First step, go to https://github.com/morewings/next-card and click the 'Use this template' button. It will offer you to clone the repository to your account.
+First step, click the 'Use this template' button. It will offer you to clone the repository to your account.
 
 Second, change `./next.config.js` to contain your chosen repository name. This is needed for GitHub pages or other non-index page deployment.
 
@@ -50,9 +50,7 @@ export const config: Config = {
     bio: 'Specialist in mergers and acquisitions',
     background: 'gradient',
     cardImage: image,
-    // Set your Google Analytics id to enable
     gaId: 'G-XXXXXXXXX',
-    // Localise sharing text
     shareTitle: 'Share link',
     // ...
 }
