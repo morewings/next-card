@@ -11,6 +11,10 @@ type Props = {
 export default function RootLayout({children}: Props) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+                <title>{config.title}</title>
+            </head>
             <body>{children}</body>
             {config.gaId && <GoogleAnalytics gaId={config.gaId} />}
         </html>

@@ -1,5 +1,4 @@
 [![Deploy to GitHub Pages](https://github.com/morewings/next-card/actions/workflows/pages.yml/badge.svg)](https://github.com/morewings/next-card/actions/workflows/pages.yml)
-[![Post-merge tasks](https://github.com/morewings/next-card/actions/workflows/merge-jobs.yml/badge.svg)](https://github.com/morewings/next-card/actions/workflows/merge-jobs.yml)
 
 # Next Card
 
