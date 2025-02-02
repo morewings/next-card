@@ -26,16 +26,11 @@
     "dependencies": {
         "@next/third-parties": "^15.1.6",
         "@phosphor-icons/react": "^2.1.7",
-        "@tanstack/react-query": "5.65.1",
-        "@tanstack/react-query-devtools": "5.65.1",
         "classnames": "2.5.1",
-        "lodash": "4.17.21",
         "next": "15.1.6",
         "react": "19.0.0",
         "react-dom": "19.0.0",
-        "react-omni-provider": "0.1.8",
         "the-new-css-reset": "^1.11.3",
-        "uniqid": "5.4.0",
         "vcards-js": "2.10.0"
     },
     "devDependencies": {
@@ -45,7 +40,6 @@
         "@testing-library/react": "16.2.0",
         "@testing-library/user-event": "14.6.1",
         "@types/jest": "29.5.14",
-        "@types/lodash": "4.17.13",
         "@types/node": "20.17.16",
         "@types/react": "19.0.8",
         "@types/react-dom": "19.0.3",
