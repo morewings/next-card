@@ -28,7 +28,10 @@ export const LinksList: FC<Props> = ({
                         event.preventDefault();
                         if (typeof window !== undefined) {
                             try {
-                                await navigator?.share?.({title, url});
+                                await navigator?.share?.({
+                                    title: `${config.title} ${title}`,
+                                    url,
+                                });
                             } catch (_) {
                                 console.warn('Sharing API disabled.');
                             }

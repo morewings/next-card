@@ -14,6 +14,7 @@ export const useVCardBlob = ({
     workPhone,
     birthday,
     isOrganization,
+    note,
 }: VCard) => {
     const [blobUrl, setBlobUrl] = useState<string>();
 
@@ -28,6 +29,7 @@ export const useVCardBlob = ({
             email && (vCard.email = email);
             workPhone && (vCard.workPhone = workPhone);
             birthday && (vCard.birthday = birthday);
+            note && (vCard.note = note);
             isOrganization && (vCard.isOrganization = true);
             window && (vCard.url = window.location.toString());
             vCard.version = '3.0';
@@ -41,6 +43,7 @@ export const useVCardBlob = ({
         isOrganization,
         lastName,
         middleName,
+        note,
         organization,
         title,
         workPhone,

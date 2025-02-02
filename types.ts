@@ -30,6 +30,7 @@ export type VCard = {
     birthday?: Date;
     email?: string;
     isOrganization?: boolean;
+    note?: string;
 };
 
 export type Config = {
