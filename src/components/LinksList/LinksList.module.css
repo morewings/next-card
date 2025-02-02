@@ -25,6 +25,7 @@
     color: white;
     display: flex;
     font-size: 18px;
+    font-weight: 500;
     gap: 12px;
     max-width: 100%;
     padding: 12px 18px;

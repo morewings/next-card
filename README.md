@@ -2,7 +2,7 @@
 
 # Next Card
 
-[![next card](./repo-logo.png)](#)
+[![next card](./repo-logo.jpg)](#)
 
 Jumpstart your online presence with this pre-built website template. Easily create a professional-looking business card or link-in-bio page to share everything you want your audience to know.
 
