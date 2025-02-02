@@ -6,7 +6,7 @@ import 'the-new-css-reset/css/reset.css';
 import {config} from '@/config';
 
 const rubik = Rubik({
-    subsets: ['latin', 'cyrillic'],
+    subsets: ['latin'],
     display: 'swap',
 });
 
