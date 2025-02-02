@@ -68,7 +68,99 @@
 }
 
 .rainbow {
-    animation: rainbow-animation 42s infinite linear;
+    animation: rainbow-animation 24s infinite linear;
+}
+
+/* Second release */
+
+.rastafari {
+    background: linear-gradient(to top, #1e9600, #ffce39, #f00);
+}
+
+.sunset {
+    background: linear-gradient(to top, #355c7d, #6c5b7b, #c06c84);
+}
+
+.selenium {
+    background: linear-gradient(to top, #3c3b3f, #605c3c);
+}
+
+.evening {
+    background: linear-gradient(to top, #0575e6, #021b79);
+}
+
+.optimistic {
+    background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+
+.elegant {
+    background-image: linear-gradient(
+        179deg,
+        rgb(0 0 0 / 100%) 9.2%,
+        rgb(127 16 16 / 100%) 103.9%
+    );
+}
+
+@keyframes mesh-animation {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    10% {
+        background-size: 140% 120%;
+    }
+
+    20% {
+        background-size: 180% 120%;
+    }
+
+    30% {
+        background-size: 200% 140%;
+    }
+
+    40% {
+        background-size: 220% 130%;
+    }
+
+    50% {
+        background-size: 220% 120%;
+    }
+
+    60% {
+        background-size: 200% 150%;
+    }
+
+    70% {
+        background-size: 180% 180%;
+    }
+
+    80% {
+        background-size: 160% 160%;
+    }
+
+    90% {
+        background-size: 120% 130%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+.mesh {
+    animation: mesh-animation 10s linear infinite;
+    background-color: #99ffb9;
+    background-image: radial-gradient(
+            at 80% 81%,
+            hsl(17deg 80% 69% / 100%) 0,
+            transparent 50%
+        ),
+        radial-gradient(at 45% 24%, hsl(240deg 90% 68% / 100%) 0, transparent 50%),
+        radial-gradient(at 96% 21%, hsl(335deg 87% 74% / 100%) 0, transparent 50%),
+        radial-gradient(at 54% 79%, hsl(218deg 69% 69% / 100%) 0, transparent 50%),
+        radial-gradient(at 16% 53%, hsl(143deg 85% 74% / 100%) 0, transparent 50%),
+        radial-gradient(at 1% 66%, hsl(99deg 92% 77% / 100%) 0, transparent 50%),
+        radial-gradient(at 38% 64%, hsl(18deg 82% 79% / 100%) 0, transparent 50%);
 }
 
 .container {
