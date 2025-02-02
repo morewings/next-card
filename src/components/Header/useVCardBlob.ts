@@ -4,20 +4,17 @@ import vCardsJS from 'vcards-js';
 import type {VCard} from '@/types';
 
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-export const useVCardBlob = (
-    {
-        firstName,
-        lastName,
-        middleName,
-        title,
-        email,
-        organization,
-        workPhone,
-        birthday,
-        isOrganization,
-    }: VCard,
-    photoUrl?: string
-) => {
+export const useVCardBlob = ({
+    firstName,
+    lastName,
+    middleName,
+    title,
+    email,
+    organization,
+    workPhone,
+    birthday,
+    isOrganization,
+}: VCard) => {
     const [blobUrl, setBlobUrl] = useState<string>();
 
     useEffect(() => {
@@ -32,11 +29,6 @@ export const useVCardBlob = (
             workPhone && (vCard.workPhone = workPhone);
             birthday && (vCard.birthday = birthday);
             isOrganization && (vCard.isOrganization = true);
-            photoUrl &&
-                vCard.photo.attachFromUrl(
-                    `${location.protocol}//${location.hostname}${photoUrl}`,
-                    'JPEG'
-                );
             window && (vCard.url = window.location.toString());
             vCard.version = '3.0';
             const blob = new Blob([vCard.getFormattedString()], {type: 'plain/text'});
@@ -50,7 +42,6 @@ export const useVCardBlob = (
         lastName,
         middleName,
         organization,
-        photoUrl,
         title,
         workPhone,
     ]);

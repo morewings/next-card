@@ -30,7 +30,7 @@ export const Header: FC<Props> = ({
     gaId = config.gaId,
     vCard = config.vCard,
 }) => {
-    const cardBlobUrl = useVCardBlob(vCard || placeholder, cardImage?.src);
+    const cardBlobUrl = useVCardBlob(vCard || placeholder);
     return (
         <header className={classes.header}>
             {cardImage && (
