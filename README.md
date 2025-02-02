@@ -44,6 +44,8 @@ Here are the available settings:
 - `shareTitle`: Localize the sharing text. 
 
 ```ts
+import image from '@/card-image.jpg';
+
 export const config: Config = {
     title: 'Patrick Bateman',
     bio: 'Specialist in mergers and acquisitions',
