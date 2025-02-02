@@ -6,7 +6,7 @@
 
 Jumpstart your online presence with this pre-built website template. Easily create a professional-looking business card or link-in-bio page to share everything you want your audience to know.
 
-Demo: [GitHub pages](https://morewings.github.io/next-card/)
+Demo: [morewings.github.io/next-card/](https://morewings.github.io/next-card/)
 
 ## Quick start
 
