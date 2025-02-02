@@ -20,6 +20,18 @@ export enum Backgrounds {
     rainbow = 'rainbow',
 }
 
+export type VCard = {
+    firstName?: string;
+    middleName?: string;
+    lastName?: string;
+    organization?: string;
+    title?: string;
+    workPhone?: string;
+    birthday?: Date;
+    email?: string;
+    isOrganization?: boolean;
+};
+
 export type Config = {
     title: string;
     bio?: string;
@@ -29,4 +41,5 @@ export type Config = {
     cardImage?: StaticImageData;
     headerLinks?: HeaderLink[];
     mainLinks: Link[];
+    vCard?: VCard;
 };

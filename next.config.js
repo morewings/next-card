@@ -7,4 +7,12 @@ module.exports = {
     images: {unoptimized: true},
     // Set to deploy at GitHub pages or other non-index page url
     basePath: '/next-card',
+    // Required to compile vCard
+    webpack(config) {
+        config.resolve.fallback = {
+            ...config.resolve.fallback,
+            fs: false,
+        };
+        return config;
+    },
 };

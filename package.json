@@ -35,7 +35,8 @@
         "react-dom": "19.0.0",
         "react-omni-provider": "0.1.8",
         "the-new-css-reset": "^1.11.3",
-        "uniqid": "5.4.0"
+        "uniqid": "5.4.0",
+        "vcards-js": "2.10.0"
     },
     "devDependencies": {
         "@eslint/eslintrc": "3.2.0",
@@ -49,6 +50,7 @@
         "@types/react": "19.0.8",
         "@types/react-dom": "19.0.3",
         "@types/uniqid": "5.3.4",
+        "@types/vcards-js": "2.10.5",
         "@typescript-eslint/eslint-plugin": "8.22.0",
         "@typescript-eslint/parser": "8.22.0",
         "alias-hq": "6.2.4",

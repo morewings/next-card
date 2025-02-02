@@ -87,6 +87,27 @@ export const config: Config = {
 }
 ```
 
+### Attach vCard file
+
+A vCard, also known as a VCF (Virtual Contact File), serves as a standardized file format for electronic business cards.  This file can be attached to your link in bio, allowing visitors to easily import your contact info into their smartphones, Outlook, and other calendar applications without having to copy/paste. You can configure this at `./config.ts`. You can also enable `isOrganization` to display contact as a company.
+
+
+```ts
+export const config: Config = {
+    // ...
+    vCard: {
+        firstName: 'Patrick',
+        lastName: 'Bateman',
+        organization: 'Pierce & Pierce',
+        title: 'Vice President',
+        birthday: new Date(1961, 9, 23),
+        workPhone: '+1 212 555 6342',
+        email: 'patrick@psycho.us',
+        // isOrganization: true,
+    },
+}
+```
+
 ### Deploy website
 
 Commit your changes, push to the main branch and wait until `.github/workflows/pages.yml` is done. Your Next Card is available at `https://<user-name>.github.io/<repo-name>/`. 
@@ -96,6 +117,7 @@ Commit your changes, push to the main branch and wait until `.github/workflows/p
 Next Card supports Google Analytics. You just need to set up your property ID in config. 
 
 There are two custom events to track: `link_click` and `contact_click`. Each event reports link title as a `value` parameter.
+
 
 ## Custom domain
 

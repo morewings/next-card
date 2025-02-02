@@ -15,6 +15,11 @@ jest.mock('@next/third-parties/google', () => ({
 
 const mockedAnalyticsFn = jest.mocked(sendGAEvent);
 
+jest.mock('@/src/components/Header/useVCardBlob', () => ({
+    __esModule: true,
+    useVCardBlob: jest.fn(),
+}));
+
 const mockString = 'foo';
 
 const mockLinks: Config['headerLinks'] = [
@@ -63,12 +68,17 @@ describe('Header', () => {
     it('reports clicks to Google analytics', () => {
         const {getByTitle} = render(<Header headerLinks={mockLinks} gaId={mockString} />);
         expect(mockedAnalyticsFn).not.toHaveBeenCalled();
-        mockLinks.forEach(({title}) => {
+        mockLinks.forEach(({id, title}) => {
             mockedAnalyticsFn.mockClear();
             fireEvent.click(getByTitle(title));
             expect(mockedAnalyticsFn).toHaveBeenCalledTimes(1);
             expect(mockedAnalyticsFn.mock.calls[0][1]).toBe('contact_click');
-            expect(mockedAnalyticsFn.mock.calls[0][2]).toMatchObject({value: title});
+            expect(mockedAnalyticsFn.mock.calls[0][2]).toMatchObject({value: id});
         });
+    });
+
+    it('renders vCard link', () => {
+        const {getByTitle} = render(<Header vCard={{firstName: 'foo'}} />);
+        expect(getByTitle('vCard')).toBeInTheDocument();
     });
 });

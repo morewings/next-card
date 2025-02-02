@@ -46,12 +46,12 @@ describe('LinksList', () => {
     it('reports link clicks to Google analytics', () => {
         const {getByTitle} = render(<LinksList mainLinks={mockLinks} gaId="foo" />);
         expect(mockedAnalyticsFn).not.toHaveBeenCalled();
-        mockLinks.forEach(({title}) => {
+        mockLinks.forEach(({title, id}) => {
             mockedAnalyticsFn.mockClear();
             fireEvent.click(getByTitle(title));
             expect(mockedAnalyticsFn).toHaveBeenCalledTimes(1);
             expect(mockedAnalyticsFn.mock.calls[0][1]).toBe('link_click');
-            expect(mockedAnalyticsFn.mock.calls[0][2]).toMatchObject({value: title});
+            expect(mockedAnalyticsFn.mock.calls[0][2]).toMatchObject({value: id});
         });
     });
 

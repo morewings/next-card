@@ -44,6 +44,9 @@ importers:
       uniqid:
         specifier: 5.4.0
         version: 5.4.0
+      vcards-js:
+        specifier: 2.10.0
+        version: 2.10.0
     devDependencies:
       '@eslint/eslintrc':
         specifier: 3.2.0
@@ -78,6 +81,9 @@ importers:
       '@types/uniqid':
         specifier: 5.3.4
         version: 5.3.4
+      '@types/vcards-js':
+        specifier: 2.10.5
+        version: 2.10.5
       '@typescript-eslint/eslint-plugin':
         specifier: 8.22.0
         version: 8.22.0(@typescript-eslint/parser@8.22.0(eslint@9.19.0)(typescript@5.7.2))(eslint@9.19.0)(typescript@5.7.2)
@@ -1717,6 +1723,9 @@ packages:
 
   '@types/uniqid@5.3.4':
     resolution: {integrity: sha512-AgC+o3/8/QEHuU3w5w2jZ8auQtjSJ/s8G8RfEk9CYLogK1RGXqxhHH0wOEAu8uHXjvj8oh/dRtfgok4IHKxh/Q==}
+
+  '@types/vcards-js@2.10.5':
+    resolution: {integrity: sha512-QkKYoDc7HcRwiJVALv3ZSl1pzX3nkGm8OiQWZVn4QM8S4xUkcZVU6ci89eF6ychyEQc3ySLDIyAa/Mymbvg3IA==}
 
   '@types/wrap-ansi@3.0.0':
     resolution: {integrity: sha512-ltIpx+kM7g/MLRZfkbL7EsCEjfzCcScLpkg37eXEtx5kmrAKBkTJwd1GIAjDSL8wTpM6Hzn5YO4pSb91BEwu1g==}
@@ -4595,6 +4604,9 @@ packages:
     resolution: {integrity: sha512-/EH/sDgxU2eGxajKdwLCDmQ4FWq+kpi3uCmBGpw1xJtnAxEjlD8j8PEiGWpCIMIs3ciNAgH0d3TTJiUkYzyZjA==}
     engines: {node: '>=10.12.0'}
 
+  vcards-js@2.10.0:
+    resolution: {integrity: sha512-nah+xbVInVJaO6+C5PEUqaougmv8BN8aa7ZCtmVQcX6eWIZGRukckFtseXSI7KD7/nXtwkJe624y42T0r+L+AQ==}
+
   vue-jscodeshift-adapter@2.2.1:
     resolution: {integrity: sha512-4aTkHYknYgP9uk/465MDZjvrotF6o2RMWDy0t+9RUULfgbkT+rHLrNw8onxOk4Y8fCpgcS81b09afodRZY/LuQ==}
 
@@ -6754,6 +6766,8 @@ snapshots:
   '@types/tough-cookie@4.0.5': {}
 
   '@types/uniqid@5.3.4': {}
+
+  '@types/vcards-js@2.10.5': {}
 
   '@types/wrap-ansi@3.0.0': {}
 
@@ -10221,6 +10235,8 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.25
       '@types/istanbul-lib-coverage': 2.0.6
       convert-source-map: 2.0.0
+
+  vcards-js@2.10.0: {}
 
   vue-jscodeshift-adapter@2.2.1:
     dependencies:
