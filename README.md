@@ -129,7 +129,7 @@ Don't forget to remove `basePath` property from the `./next.config.js`.
 
 ## Font support
 
-Next card uses [Rubik font](https://fonts.google.com/specimen/Rubik). By default, it bundles with `latin` and `cyrillic` subsets. You can enable additional subsets at `app/layout.tsx`.
+Next card uses [Rubik font](https://fonts.google.com/specimen/Rubik). By default, it bundles with `latin` subset. You can enable additional subsets at `app/layout.tsx`.
 
 ```ts
 import {Rubik} from 'next/font/google';
