@@ -38,6 +38,8 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
+    max-width: 100%;
+    overflow: auto;
 
     @media (pointer: coarse) {
         gap: 24px;
