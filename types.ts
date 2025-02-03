@@ -12,7 +12,7 @@ export type HeaderLink = Link & {
     icon: Icon;
 };
 
-export enum Backgrounds {
+export const enum Backgrounds {
     fresh = 'fresh',
     strict = 'strict',
     bold = 'bold',
