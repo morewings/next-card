@@ -18,6 +18,13 @@ export enum Backgrounds {
     bold = 'bold',
     gradient = 'gradient',
     rainbow = 'rainbow',
+    rastafari = 'rastafari',
+    sunset = 'sunset',
+    elegant = 'elegant',
+    selenium = 'selenium',
+    evening = 'evening',
+    optimistic = 'optimistic',
+    mesh = 'mesh',
 }
 
 export type VCard = {

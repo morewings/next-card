@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import {Fragment} from 'react';
+import {Fragment, Suspense} from 'react';
 
 import {Header} from '@/src/components/Header';
 import {LinksList} from '@/src/components/LinksList';
@@ -9,7 +9,9 @@ import {Background, Container} from '@/src/components/Background';
 export default function IndexPage() {
     return (
         <Fragment>
-            <Background />
+            <Suspense>
+                <Background />
+            </Suspense>
             <Container>
                 <Header />
                 <LinksList />

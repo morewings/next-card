@@ -36,7 +36,9 @@ Here are the available settings:
 
 - `bio`: Add a brief description to display below the name.  
 
-- `background`: Select a background style.  There are five different styles available: `fresh`, `strict`, `bold`, `gradient`, `rainbow`.
+- `background`: Select a background style.  There are 12 different styles available: fresh, strict, bold, gradient, rainbow, rastafari, sunset, elegant,
+selenium, evening, optimistic, mesh. See below.
+
 - `cardImage`: Set the image to be used at the header of the card.  
 
 - `gaId`: Set your Google Analytics ID to enable tracking. More later.
@@ -138,8 +140,64 @@ const rubik = Rubik({
     subsets: ['latin', 'cyrillic'], // <==
     display: 'swap',
 });
-
 ```
+
+## Available themes
+
+<table>
+    <tr>
+        <th>Background example</th>
+        <th>Preview link</th>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/fresh.png" alt="fresh"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=fresh">Fresh</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/strict.png" alt="strict"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=strict">Strict</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/bold.png" alt="bold"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=bold">bold</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/gradient.gif" alt="gradient"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=gradient">Gradient (Animated)</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/rainbow.gif" alt="rainbow"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=rainbow">Rainbow (Animated)</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/rastafari.png" alt="rastafari"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=rastafari">Rastafari</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/sunset.png" alt="sunset"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=sunset">Sunset</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/selenium.png" alt="selenium"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=selenium">Selenium</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/evening.png" alt="evening"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=evening">Evening</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/optimistic.png" alt="optimistic"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=optimistic">Optimistic</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/elegant.png" alt="elegant"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=elegant">Elegant</a></td>
+    </tr>
+    <tr>
+        <td><img width="222" height="222" src="/theme-previews/mesh.gif" alt="mesh"></td>
+        <td><a href="https://morewings.github.io/next-card/?background=mesh">Mesh</a></td>
+    </tr>
+</table>
 
 
 
