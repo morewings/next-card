@@ -19,9 +19,7 @@ export default function RootLayout({children}: Props) {
         <html lang="en" suppressHydrationWarning className={rubik.className}>
             <head>
                 <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-                <meta 
-                    name="description" 
-                    content={`${config.title}: ${config.bio}`} />
+                <meta name="description" content={`${config.title}: ${config.bio}`} />
                 <title>{config.title}</title>
             </head>
             <body>{children}</body>
