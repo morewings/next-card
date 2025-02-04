@@ -25,7 +25,7 @@ const getBgValue = (propBg: Config['background'], paramBg?: Config['background']
     }
     return propBg;
 };
-//blurry
+
 export const Background: FC<Props> = ({children, background = config.background}) => {
     const searchParams = useSearchParams();
 
