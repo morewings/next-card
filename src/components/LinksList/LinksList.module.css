@@ -29,6 +29,7 @@
     gap: 12px;
     max-width: 100%;
     padding: 12px 18px;
+    -webkit-tap-highlight-color: transparent;
     transition:
         background-color 200ms linear,
         text-shadow 200ms linear,
@@ -63,6 +64,7 @@
         cursor: pointer;
         display: block;
         height: 36px;
+        -webkit-tap-highlight-color: transparent;
         width: 36px;
 
         & svg {

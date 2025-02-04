@@ -50,6 +50,7 @@
 .headerLink {
     display: block;
     opacity: 0.8;
+    -webkit-tap-highlight-color: transparent;
 
     @media (hover: none) {
         opacity: 1;
