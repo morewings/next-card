@@ -4,10 +4,7 @@ module.exports = {
     distDir: 'build',
     output: 'export',
     cleanDistDir: true,
-    images: {
-        loader: 'custom',
-        loaderFile: './imageLoader.ts',
-    },
+    images: {unoptimized: true},
     // Set to deploy at GitHub pages or other non-index page url
     basePath: '/next-card',
     // Required to compile vCard
