@@ -48,7 +48,7 @@
         "@typescript-eslint/eslint-plugin": "8.22.0",
         "@typescript-eslint/parser": "8.22.0",
         "alias-hq": "6.2.4",
-        "eslint": "9.19.0",
+        "eslint": "9.21.0",
         "eslint-config-next": "15.1.6",
         "eslint-config-prettier": "10.0.2",
         "eslint-plugin-prettier": "5.2.3",
