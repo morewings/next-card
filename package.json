@@ -45,8 +45,8 @@
         "@types/react-dom": "19.0.4",
         "@types/uniqid": "5.3.4",
         "@types/vcards-js": "2.10.5",
-        "@typescript-eslint/eslint-plugin": "8.22.0",
-        "@typescript-eslint/parser": "8.22.0",
+        "@typescript-eslint/eslint-plugin": "8.33.0",
+        "@typescript-eslint/parser": "8.33.0",
         "alias-hq": "6.2.4",
         "eslint": "9.21.0",
         "eslint-config-next": "15.3.3",
@@ -66,6 +66,6 @@
         "stylelint-order": "6.0.4",
         "stylelint-prettier": "5.0.3",
         "typescript": "5.7.3",
-        "typescript-eslint": "8.22.0"
+        "typescript-eslint": "8.33.0"
     }
 }
