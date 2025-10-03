@@ -1,5 +1,5 @@
 const nextJest = require('next/jest');
-const hq = require('alias-hq');
+const {kitchen} = require('alias-kitchen');
 
 const createJestConfig = nextJest({
     // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
@@ -16,6 +16,6 @@ module.exports = createJestConfig({
     setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
     modulePathIgnorePatterns: ['<rootDir>/templates/'],
     moduleNameMapper: {
-        ...hq.get('jest'),
+        ...kitchen({recipe: 'jest'}),
     }
 });

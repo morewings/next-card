@@ -24,13 +24,13 @@
         "test": "jest"
     },
     "dependencies": {
-        "@next/third-parties": "^15.1.6",
-        "@phosphor-icons/react": "^2.1.7",
+        "@next/third-parties": "15.5.4",
+        "@phosphor-icons/react": "2.1.10",
         "classnames": "2.5.1",
-        "next": "15.3.5",
-        "react": "19.0.0",
-        "react-dom": "19.0.0",
-        "the-new-css-reset": "^1.11.3",
+        "next": "15.5.4",
+        "react": "19.2.0",
+        "react-dom": "19.2.0",
+        "the-new-css-reset": "1.11.3",
         "vcards-js": "2.10.0"
     },
     "devDependencies": {
@@ -47,7 +47,7 @@
         "@types/vcards-js": "2.10.5",
         "@typescript-eslint/eslint-plugin": "8.33.0",
         "@typescript-eslint/parser": "8.33.0",
-        "alias-hq": "6.2.4",
+        "alias-kitchen": "0.2.2",
         "eslint": "9.21.0",
         "eslint-config-next": "15.3.5",
         "eslint-config-prettier": "10.0.2",
