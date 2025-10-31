@@ -44,8 +44,6 @@ Enter your data into `./config.ts`. Here are the available settings:
 - `background`: Select a background style.  There are 12 different styles available: fresh, strict, bold, gradient, rainbow, rastafari, sunset, elegant,
 selenium, evening, optimistic, mesh. See below.
 
-- `cardImage`: Set the image to be used at the header of the card.
-
 - `gaId`: Set your Google Analytics ID to enable tracking. More later.
 
 - `shareTitle`: Localize the sharing text.
@@ -55,7 +53,6 @@ export const config: Config = {
     title: 'Patrick Bateman',
     bio: 'Specialist in mergers and acquisitions',
     background: 'gradient',
-    cardImage: image,
     gaId: 'G-XXXXXXXXX',
     shareTitle: 'Share link',
     // ...
