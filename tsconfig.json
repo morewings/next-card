@@ -1,44 +1,33 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "lib": ["dom", "dom.iterable", "esnext"],
-        "allowJs": true,
-        "skipLibCheck": true,
-        "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
-        "esModuleInterop": true,
-        "module": "esnext",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "jsx": "preserve",
-        "incremental": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./*"]
-        },
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ]
-    },
-    "include": [
-        "next-env.d.ts",
-        "additional.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.stories.tsx",
-        "**/*.stories.ts",
-        "*.config.ts",
-        "src",
-        "app",
-        ".eslintrc.cjs",
-        "templates/**/*.ts",
-        "templates/**/*.tsx",
-        "build/types/**/*.ts",
-        ".next/types/**/*.ts"
-    ],
-    "exclude": ["node_modules"]
+  "compilerOptions": {
+    "types": ["vitest/globals"],
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Aliases */
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "templates/**/*.ts", "templates/**/*.tsx", "src/vite-env.d.ts"],
+  "exclude": ["**/*.stories.*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

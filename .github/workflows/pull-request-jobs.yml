@@ -48,22 +48,29 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Setup Next.js cache
+      - name: Cache Playwright browsers
+        id: cache-playwright
         uses: actions/cache@v4
         with:
-          path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
+          # The path where Playwright stores its binaries
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ hashFiles('pnpm-lock.yaml') }}
+          # Use a generic fallback key
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+            playwright-browsers-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright browsers
+        # Only run this step if the cache was not found
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
+        run: pnpm exec playwright install firefox --with-deps
 
       - name: Run test tasks
         run: |
-          pnpm install
           pnpm run lint:code --quiet
           pnpm run lint:style --quiet
-          pnpm run lint:tsc
+          pnpm run lint:types
           pnpm run build
-          pnpm run test --silent
+          pnpm run test:browser

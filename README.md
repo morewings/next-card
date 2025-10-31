@@ -12,42 +12,45 @@ Demo: [morewings.github.io/next-card/](https://morewings.github.io/next-card/)
 
 First step, click the 'Use this template' button. It will offer you to clone the repository to your account.
 
-Second, change `./next.config.js` to contain your chosen repository name. This is needed for GitHub pages or other non-index page deployment.
+Second, change `./vite.config.ts` to contain your chosen repository name and card title.
 
 ```js
-/** @type {import('next').NextConfig} */
-module.exports = {
-    // ...
-    basePath: '/your-repository',
-};
+import {defineConfig} from 'vite';
+
+// This is needed for GitHub pages or other non-index page deployments.
+const baseUrl = '/next-card/';
+// Set the title page head tag
+const title = 'Patrick Bateman';
+
+export default defineConfig({
+    //...
+})
 ```
 
 Go to `Settings > Pages` section and enable deployment via GitHub action.
 
 ![Settings](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/agsm36v13ebg1j13b5ee.png)
 
-### Fill your info 
+### Fill your info
 
-Now you'll have to replace `./card-image.jpg` with your picture and enter your data into `./config.ts`.
+Replace `./card-image.jpg` with your picture and update import at `src/components/Header/Header.tsx` if needed.
 
-Here are the available settings:
+Enter your data into `./config.ts`. Here are the available settings:
 
-- `title`: Set your or company name.  
+- `title`: Set your or company name.
 
-- `bio`: Add a brief description to display below the name.  
+- `bio`: Add a brief description to display below the name.
 
 - `background`: Select a background style.  There are 12 different styles available: fresh, strict, bold, gradient, rainbow, rastafari, sunset, elegant,
 selenium, evening, optimistic, mesh. See below.
 
-- `cardImage`: Set the image to be used at the header of the card.  
+- `cardImage`: Set the image to be used at the header of the card.
 
 - `gaId`: Set your Google Analytics ID to enable tracking. More later.
 
-- `shareTitle`: Localize the sharing text. 
+- `shareTitle`: Localize the sharing text.
 
 ```ts
-import image from '@/card-image.jpg';
-
 export const config: Config = {
     title: 'Patrick Bateman',
     bio: 'Specialist in mergers and acquisitions',
@@ -66,8 +69,8 @@ Each entry consists of `title`: the display name of the link; `id`: a unique ide
 
 ```ts
 import {
-    Envelope,
-    GithubLogo,
+    EnvelopeIcon,
+    GithubLogoIcon,
 } from '@phosphor-icons/react/dist/ssr';
 
 export const config: Config = {
@@ -77,7 +80,7 @@ export const config: Config = {
             title: 'Email',
             id: 'email',
             url: 'mailto:user@example.com',
-            icon: Envelope,
+            icon: EnvelopeIcon,
         },
     ],
     mainLinks: [
@@ -85,7 +88,7 @@ export const config: Config = {
             id: 'github',
             title: 'GitHub',
             url: 'https://github.com/user-name',
-            icon: GithubLogo,
+            icon: GithubLogoIcon,
         },
     ],
 }
@@ -114,11 +117,11 @@ export const config: Config = {
 
 ### Deploy website
 
-Commit your changes, push to the main branch and wait until `.github/workflows/pages.yml` is done. Your Next Card is available at `https://<user-name>.github.io/<repo-name>/`. 
+Commit your changes, push to the main branch and wait until `.github/workflows/pages.yml` is done. Your Next Card is available at `https://<user-name>.github.io/<repo-name>/`.
 
 ## Set up analytics
 
-Next Card supports Google Analytics. You just need to set up your property ID in config. 
+Next Card supports Google Analytics. You just need to set up your property ID in config.
 
 There are two custom events to track: `link_click` and `contact_click`. Each event reports link title as a `value` parameter.
 

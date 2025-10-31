@@ -1,8 +1,6 @@
-'use client';
-
 import type {FC, MouseEvent} from 'react';
-import {Export} from '@phosphor-icons/react/dist/ssr';
-import {sendGAEvent} from '@next/third-parties/google';
+import {ExportIcon} from '@phosphor-icons/react/dist/ssr';
+import ReactGA from 'react-ga4';
 
 import {config} from '@/config';
 import type {Config} from '@/types';
@@ -15,10 +13,7 @@ export type Props = {
     gaId?: Config['gaId'];
 };
 
-export const LinksList: FC<Props> = ({
-    mainLinks = config.mainLinks,
-    gaId = config.gaId,
-}) => {
+export const LinksList: FC<Props> = ({mainLinks = config.mainLinks, gaId = config.gaId}) => {
     const canShare = useCanShare();
     return (
         <div className={classes.wrapper}>
@@ -26,7 +21,7 @@ export const LinksList: FC<Props> = ({
                 {mainLinks.map(({url, id, title, icon: Icon}) => {
                     const handleShare = async (event: MouseEvent) => {
                         event.preventDefault();
-                        if (typeof window !== undefined) {
+                        if (typeof window !== 'undefined') {
                             try {
                                 await navigator?.share?.({
                                     title: `${config.title} ${title}`,
@@ -39,8 +34,12 @@ export const LinksList: FC<Props> = ({
                     };
 
                     const handleClick = () => {
-                        if (!!gaId) {
-                            sendGAEvent('event', 'link_click', {value: id});
+                        if (gaId) {
+                            ReactGA.event({
+                                category: 'navigation',
+                                action: 'button_click',
+                                label: title,
+                            });
                         }
                     };
 
@@ -51,16 +50,10 @@ export const LinksList: FC<Props> = ({
                             key={id}
                             href={url}
                             target="_blank"
-                            title={title}>
+                            title={title}
+                            rel="noreferrer">
                             <div className={classes.iconWrapper}>
-                                {Icon && (
-                                    <Icon
-                                        weight="fill"
-                                        size={36}
-                                        alt={id}
-                                        aria-hidden={true}
-                                    />
-                                )}
+                                {Icon && <Icon weight="fill" size={36} alt={id} aria-hidden={true} />}
                             </div>
                             <div className={classes.title}>{title}</div>
                             <button
@@ -68,7 +61,7 @@ export const LinksList: FC<Props> = ({
                                 className={classes.share}
                                 onClick={handleShare}
                                 disabled={!canShare}>
-                                <Export weight="regular" size={36} alt="Share" />
+                                <ExportIcon weight="regular" size={36} alt="Share" />
                             </button>
                         </a>
                     );

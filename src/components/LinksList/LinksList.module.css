@@ -36,7 +36,7 @@
         color 200ms linear;
     width: 600px;
 
-    & .iconWrapper {
+    & .icon-wrapper {
         height: 36px;
         width: 36px;
 
@@ -91,7 +91,7 @@
             text-shadow: none;
         }
 
-        & .iconWrapper,
+        & .icon-wrapper,
         & .share {
             & svg {
                 filter: none;
