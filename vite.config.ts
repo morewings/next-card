@@ -5,7 +5,10 @@ import postcssPresetEnv from 'postcss-preset-env';
 import {imagetools} from 'vite-imagetools';
 
 const baseUrl = '/next-card/';
-const title = 'Patrick Bateman';
+// const title = 'Patrick Bateman';
+
+// @ts-expect-error no type
+import {config} from './src/config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,13 +27,61 @@ export default defineConfig({
             },
         }),
         {
-            name: 'Inject title',
+            name: 'Inject meta tags',
             apply: () => true,
             transformIndexHtml(_) {
                 return [
                     {
                         tag: 'title',
-                        children: title,
+                        children: `${config.title}: ${config.bio}`,
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'title',
+                            content: config.title,
+                        },
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'og:title',
+                            content: config.title,
+                        },
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'description',
+                            content: config.bio,
+                        },
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'og:description',
+                            content: config.bio,
+                        },
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'og:type',
+                            content: 'profile',
+                        },
+                        injectTo: 'head',
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'og:image',
+                            content: 'web-app-manifest-512x512.png',
+                        },
                         injectTo: 'head',
                     },
                 ];
