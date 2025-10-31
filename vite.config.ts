@@ -6,7 +6,6 @@ import {imagetools} from 'vite-imagetools';
 import {viteStaticCopy} from 'vite-plugin-static-copy';
 
 const baseUrl = '/next-card/';
-// const title = 'Patrick Bateman';
 
 // @ts-expect-error no type
 import {config} from './src/config';
@@ -81,7 +80,7 @@ export default defineConfig({
                         tag: 'meta',
                         attrs: {
                             name: 'og:image',
-                            content: '/next-card/assets/card-image.jpg',
+                            content: `${baseUrl}assets/card-image.jpg`,
                         },
                         injectTo: 'head',
                     },
