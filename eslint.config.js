@@ -144,23 +144,6 @@ export default [
             ],
         },
     },
-    /* Disable `environment` directory imports for library files */
-    {
-        files: ['src/lib/**/*.{js,jsx,ts,tsx}'],
-        rules: {
-            'no-restricted-imports': [
-                'error',
-                {
-                    patterns: [
-                        {
-                            group: ['**/environment/**'],
-                            message: 'Imports from environment directory are forbidden in the library files.',
-                        },
-                    ],
-                },
-            ],
-        },
-    },
     /* Disable `template` directory imports for all files */
     {
         files: ['src/**/*.{js,jsx,ts,tsx}'],
@@ -176,16 +159,6 @@ export default [
                     ],
                 },
             ],
-        },
-    },
-    /**
-     * Disable rules of hooks for story files in order to have better story code display.
-     * @see TemplateName.stories.tsx
-     */
-    {
-        files: ['**/*.stories.*'],
-        rules: {
-            'react-hooks/rules-of-hooks': 'off',
         },
     },
     {
