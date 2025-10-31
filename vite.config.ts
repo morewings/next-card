@@ -33,7 +33,7 @@ export default defineConfig({
                 return [
                     {
                         tag: 'title',
-                        children: `${config.title}: ${config.bio}`,
+                        children: config.title,
                         injectTo: 'head',
                     },
                     {
@@ -80,7 +80,7 @@ export default defineConfig({
                         tag: 'meta',
                         attrs: {
                             name: 'og:image',
-                            content: 'web-app-manifest-512x512.png',
+                            content: '/web-app-manifest-512x512.png',
                         },
                         injectTo: 'head',
                     },
