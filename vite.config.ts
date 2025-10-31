@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import {kitchen} from 'alias-kitchen';
 import postcssPresetEnv from 'postcss-preset-env';
 import {imagetools} from 'vite-imagetools';
+import {viteStaticCopy} from 'vite-plugin-static-copy';
 
 const baseUrl = '/next-card/';
 // const title = 'Patrick Bateman';
@@ -80,13 +81,21 @@ export default defineConfig({
                         tag: 'meta',
                         attrs: {
                             name: 'og:image',
-                            content: '/next-card/web-app-manifest-512x512.png',
+                            content: '/next-card/assets/card-image.jpg',
                         },
                         injectTo: 'head',
                     },
                 ];
             },
         },
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'src/card-image.jpg',
+                    dest: 'assets',
+                },
+            ],
+        }),
     ],
     build: {
         sourcemap: true,
