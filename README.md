@@ -31,9 +31,9 @@ Go to `Settings > Pages` section and enable deployment via GitHub action.
 
 ### Fill your info
 
-Replace `./src/card-image.jpg` with your picture and update import at `src/components/Header/Header.tsx` if needed.
+Replace `./src/card-image.jpg` with your picture and update import at `./src/components/Header/Header.tsx` if needed.
 
-Enter your data into `./config.ts`. Here are the available settings:
+Enter your data into `./src/config.ts`. Here are the available settings:
 
 - `title`: Set your or company name.
 
