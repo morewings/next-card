@@ -5,7 +5,7 @@ import {AddressBookTabsIcon} from '@phosphor-icons/react/dist/ssr';
 import {useVCardBlob} from '@/components/Header/useVCardBlob';
 import {config} from '@/config';
 import type {Config} from '@/types';
-import image from '@/card-image.jpg';
+import image from '@/card-image.jpg?cardImage';
 
 import classes from './Header.module.css';
 

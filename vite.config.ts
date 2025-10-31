@@ -18,7 +18,7 @@ export default defineConfig({
         imagetools({
             defaultDirectives: id => {
                 if (id.searchParams.has('cardImage')) {
-                    return new URLSearchParams('w=133&h=133&format=webp');
+                    return new URLSearchParams('w=266&h=266&format=webp');
                 }
                 return new URLSearchParams();
             },
