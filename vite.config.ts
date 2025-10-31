@@ -80,7 +80,7 @@ export default defineConfig({
                         tag: 'meta',
                         attrs: {
                             name: 'og:image',
-                            content: '/web-app-manifest-512x512.png',
+                            content: '/next-card/web-app-manifest-512x512.png',
                         },
                         injectTo: 'head',
                     },
