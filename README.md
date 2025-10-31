@@ -120,7 +120,7 @@ There are two custom events to track: `link_click` and `contact_click`. Each eve
 
 You can [set up a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for your card.
 
-Remember to remove `basePath` property from the `./next.config.js`.
+Remember to change `basePath` value to `/` from the `./vite.config.js`.
 
 ## Font support
 
