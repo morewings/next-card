@@ -52,7 +52,7 @@
     "@vitest/browser-playwright": "4.0.4",
     "@vitest/browser-preview": "4.0.4",
     "@yelo/rollup-node-external": "1.0.1",
-    "alias-kitchen": "0.2.1",
+    "alias-kitchen": "0.2.4",
     "eslint": "9.31.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import": "2.32.0",
