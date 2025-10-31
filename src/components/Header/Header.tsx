@@ -33,7 +33,7 @@ export const Header: FC<Props> = ({
         <header className={classes.header}>
             {cardImage && (
                 <div className={classes.imageContainer}>
-                    <img src={cardImage} alt={title} />
+                    <img src={cardImage} alt={title} width={133} height={133} />
                 </div>
             )}
             <div className={classes.title}>{title}</div>
