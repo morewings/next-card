@@ -11,7 +11,7 @@ const title = 'Patrick Bateman';
 export default defineConfig({
     base: baseUrl,
     resolve: {
-        alias: kitchen({recipe: 'rollup'}),
+        alias: kitchen({recipe: 'vite'}),
     },
     plugins: [
         react(),
