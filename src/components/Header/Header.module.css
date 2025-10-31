@@ -7,7 +7,7 @@
     padding: 24px 24px 0;
 }
 
-.imageContainer {
+.image-container {
     border-radius: 50%;
     height: 133px;
     overflow: hidden;
@@ -35,7 +35,7 @@
     text-shadow: 1px 1px 1px rgb(0 0 0 / 66%);
 }
 
-.headerLinks {
+.header-links {
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
@@ -47,7 +47,7 @@
     }
 }
 
-.headerLink {
+.header-link {
     display: block;
     opacity: 0.8;
     -webkit-tap-highlight-color: transparent;

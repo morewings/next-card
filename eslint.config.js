@@ -1,47 +1,61 @@
 // @ts-check
 
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
+import eslint from '@eslint/js';
+import eslintTS from 'typescript-eslint';
+import tsParser from '@typescript-eslint/parser';
+import pluginImport from 'eslint-plugin-import';
+import pluginSSRFriendly from 'eslint-plugin-ssr-friendly';
+import pluginPrettier from 'eslint-plugin-prettier';
+import pluginTypescript from '@typescript-eslint/eslint-plugin';
+import pluginReactRefresh from 'eslint-plugin-react-refresh';
+import configReactRecommended from 'eslint-plugin-react/configs/recommended.js';
+import configReactJSXRuntime from 'eslint-plugin-react/configs/jsx-runtime.js';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
+import {fixupPluginRules} from '@eslint/compat';
+import configPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
-import {FlatCompat} from '@eslint/eslintrc';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-});
-
-// eslint-disable-next-line import/no-anonymous-default-export
 export default [
-    ...compat.config({
-        plugins: ['prettier', '@typescript-eslint'],
-        extends: [
-            'next/core-web-vitals',
-            'next/typescript',
-            'plugin:@typescript-eslint/recommended',
-            'plugin:@typescript-eslint/stylistic',
-            'prettier',
-        ],
+    eslint.configs.recommended,
+    ...eslintTS.configs.recommended,
+    ...eslintTS.configs.stylistic,
+    configReactRecommended,
+    configReactJSXRuntime,
+    configPrettierRecommended,
+    {
+        files: ['**/*.{js,ts,tsx,cjs}'],
+        linterOptions: {
+            reportUnusedDisableDirectives: 'error',
+        },
+        languageOptions: {
+            parser: tsParser,
+            parserOptions: {
+                ecmaFeatures: {modules: true},
+                ecmaVersion: 'latest',
+                project: './tsconfig.linter.json',
+            },
+        },
+        settings: {
+            react: {
+                version: 'detect',
+            },
+        },
+        plugins: {
+            import: pluginImport,
+            prettier: pluginPrettier,
+            '@typescript-eslint': pluginTypescript,
+            'react-refresh': pluginReactRefresh,
+            'react-hooks': fixupPluginRules(pluginReactHooks),
+            'ssr-friendly': fixupPluginRules(pluginSSRFriendly),
+        },
         rules: {
-            'prettier/prettier': [
-                'error',
-                {
-                    semi: true,
-                    singleQuote: true,
-                    jsxSingleQuote: false,
-                    trailingComma: 'es5',
-                    bracketSpacing: false,
-                    jsxBracketSameLine: true,
-                    arrowParens: 'avoid',
-                },
-            ],
-            '@typescript-eslint/no-empty-function': [
-                'error',
-                {allow: ['arrowFunctions']},
-            ],
+            ...pluginReactHooks.configs.recommended.rules,
+            ...pluginSSRFriendly.configs.recommended.rules,
+            /**
+             * Allow empty arrow functions `() => {}`, while keeping other empty functions restricted
+             * @see https://eslint.org/docs/latest/rules/no-empty-function#allow-arrowfunctions
+             */
+            '@typescript-eslint/no-empty-function': ['error', {allow: ['arrowFunctions']}],
             '@typescript-eslint/ban-ts-comment': 1,
-            '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
             'no-const-assign': 'error',
             /** Restrict imports from devDependencies since they are not included in library build. peerDependencies are ok */
             'import/no-extraneous-dependencies': [
@@ -58,12 +72,7 @@ export default [
             'import/order': [
                 'error',
                 {
-                    groups: [
-                        'builtin',
-                        'external',
-                        'internal',
-                        ['parent', 'sibling', 'index'],
-                    ],
+                    groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index']],
                     pathGroups: [
                         {
                             pattern: '@/**',
@@ -80,6 +89,21 @@ export default [
              */
             '@typescript-eslint/consistent-type-imports': 'error',
             'import/no-cycle': 'error',
+            'prettier/prettier': [
+                'error',
+                {
+                    semi: true,
+                    singleQuote: true,
+                    jsxSingleQuote: false,
+                    trailingComma: 'es5',
+                    bracketSpacing: false,
+                    jsxBracketSameLine: true,
+                    arrowParens: 'avoid',
+                },
+            ],
+            /* Required by vite */
+            'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+            '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
             /**
              * Allow unused variables with names stating with '_'
              * @see https://eslint.org/docs/latest/rules/no-unused-vars
@@ -96,7 +120,7 @@ export default [
                 },
             ],
         },
-    }),
+    },
     /* Allow devDependencies imports for tests and config files */
     {
         files: [
@@ -104,9 +128,12 @@ export default [
             '**/testUtils/*.{js,jsx,ts,tsx}',
             '*/*.{js,jsx,ts,tsx}',
             '**/setupTests.ts',
-            '*.config.{js,ts,mjs}',
-            '**/env/**/*.*',
+            '**/*.stories.*',
+            '*.config.{js,ts}',
         ],
+        plugins: {
+            import: pluginImport,
+        },
         rules: {
             'import/no-extraneous-dependencies': [
                 'error',
@@ -127,8 +154,7 @@ export default [
                     patterns: [
                         {
                             group: ['**/environment/**'],
-                            message:
-                                'Imports from environment directory are forbidden in the library files.',
+                            message: 'Imports from environment directory are forbidden in the library files.',
                         },
                     ],
                 },
@@ -152,7 +178,17 @@ export default [
             ],
         },
     },
+    /**
+     * Disable rules of hooks for story files in order to have better story code display.
+     * @see TemplateName.stories.tsx
+     */
     {
-        ignores: ['**/*.{snap,css,jpg}'],
+        files: ['**/*.stories.*'],
+        rules: {
+            'react-hooks/rules-of-hooks': 'off',
+        },
+    },
+    {
+        ignores: ['**/*.snap'],
     },
 ];

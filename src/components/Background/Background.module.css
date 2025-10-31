@@ -94,11 +94,7 @@
 }
 
 .elegant {
-    background-image: linear-gradient(
-        179deg,
-        rgb(0 0 0 / 100%) 9.2%,
-        rgb(127 16 16 / 100%) 103.9%
-    );
+    background-image: linear-gradient(179deg, rgb(0 0 0 / 100%) 9.2%, rgb(127 16 16 / 100%) 103.9%);
 }
 
 @keyframes mesh-animation {
@@ -150,11 +146,8 @@
 .mesh {
     animation: mesh-animation 10s linear infinite;
     background-color: #99ffb9;
-    background-image: radial-gradient(
-            at 80% 81%,
-            hsl(17deg 80% 69% / 100%) 0,
-            transparent 50%
-        ),
+    background-image:
+        radial-gradient(at 80% 81%, hsl(17deg 80% 69% / 100%) 0, transparent 50%),
         radial-gradient(at 45% 24%, hsl(240deg 90% 68% / 100%) 0, transparent 50%),
         radial-gradient(at 96% 21%, hsl(335deg 87% 74% / 100%) 0, transparent 50%),
         radial-gradient(at 54% 79%, hsl(218deg 69% 69% / 100%) 0, transparent 50%),

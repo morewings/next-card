@@ -1,5 +1,4 @@
 import type {Icon} from '@phosphor-icons/react';
-import type {StaticImageData} from 'next/image';
 
 export type Link = {
     title: string;
@@ -25,6 +24,7 @@ export enum Backgrounds {
     evening = 'evening',
     optimistic = 'optimistic',
     mesh = 'mesh',
+    demo = 'demo',
 }
 
 export type VCard = {
@@ -46,7 +46,6 @@ export type Config = {
     background: keyof typeof Backgrounds;
     gaId?: string;
     shareTitle: string;
-    cardImage?: StaticImageData;
     headerLinks?: HeaderLink[];
     mainLinks: Link[];
     vCard?: VCard;

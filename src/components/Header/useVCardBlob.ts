@@ -19,7 +19,7 @@ export const useVCardBlob = ({
     const [blobUrl, setBlobUrl] = useState<string>();
 
     useEffect(() => {
-        if (typeof window !== undefined) {
+        if (typeof window !== 'undefined') {
             const vCard = vCardsJS();
             firstName && (vCard.firstName = firstName);
             lastName && (vCard.lastName = lastName);
@@ -36,18 +36,7 @@ export const useVCardBlob = ({
             const blob = new Blob([vCard.getFormattedString()], {type: 'plain/text'});
             setBlobUrl(URL.createObjectURL(blob));
         }
-    }, [
-        birthday,
-        email,
-        firstName,
-        isOrganization,
-        lastName,
-        middleName,
-        note,
-        organization,
-        title,
-        workPhone,
-    ]);
+    }, [birthday, email, firstName, isOrganization, lastName, middleName, note, organization, title, workPhone]);
 
     return blobUrl;
 };

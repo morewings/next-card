@@ -1,12 +1,11 @@
-import React from 'react';
-import {render} from '@testing-library/react';
+import {render} from 'vitest-browser-react';
 
 import {Container} from './Container';
 
 describe('Container', () => {
-    it('renders children', () => {
+    test('renders children', async () => {
         const children = 'foo';
-        const {getByText} = render(<Container>{children}</Container>);
-        expect(getByText(children)).toBeInTheDocument();
+        const {getByText} = await render(<Container>{children}</Container>);
+        await expect.element(getByText(children)).toBeInTheDocument();
     });
 });
