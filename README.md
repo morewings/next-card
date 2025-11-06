@@ -42,7 +42,7 @@ Enter your data into `./src/config.ts`. Here are the available settings:
 - `background`: Select a background style. There are 12 different styles available: fresh, strict, bold, gradient, rainbow, rastafari, sunset, elegant,
   selenium, evening, optimistic, mesh. [See below](#available-themes).
 
-- `gaId`: Set your Google Analytics ID to enable tracking. More later.
+- `gaId`: Set your Google Analytics ID to enable tracking.
 
 - `shareTitle`: Localize the sharing text.
 
