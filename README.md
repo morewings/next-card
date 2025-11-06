@@ -59,7 +59,7 @@ export const config: Config = {
 
 ### Add contact links
 
-In the same file, `./config.ts` fill `headerLinks` array with your contact info links and set up your hero links at the `mainLinks` section of the config.
+In the same file, `./src/config.ts` fill `headerLinks` array with your contact info links and set up your hero links at the `mainLinks` section of the config.
 Each entry consists of `title`: the display name of the link; `id`: a unique identifier for the link; `url`: The URL the link points to; `icon`: an icon to be displayed with the link. You can use any icon from the [Phosphor icons collection](https://phosphoricons.com/).
 
 ```ts
@@ -88,7 +88,7 @@ export const config: Config = {
 
 ### Attach vCard file
 
-A vCard, also known as a VCF (Virtual Contact File), serves as a standardized file format for electronic business cards. This file can be attached to your link in bio, allowing visitors to easily import your contact info into their smartphones, Outlook, and other calendar applications without having to copy/paste. You can configure this at `./config.ts`. You can also enable `isOrganization` to display contact as a company.
+A vCard, also known as a VCF (Virtual Contact File), serves as a standardized file format for electronic business cards. This file can be attached to your link in bio, allowing visitors to easily import your contact info into their smartphones, Outlook, and other calendar applications without having to copy/paste. You can configure this at `./src/config.ts`. You can also enable `isOrganization` to display contact as a company.
 
 ```ts
 export const config: Config = {
@@ -112,7 +112,7 @@ Commit your changes, push to the main branch, and wait until `.github/workflows/
 
 ## Set up analytics
 
-Next Card supports Google Analytics. You just need to set up your property ID in config.
+Next Card supports Google Analytics. You just need to set up your id in config.
 
 There are two custom events to track: `link_click` and `contact_click`. Each event reports link title as a `value` parameter.
 
