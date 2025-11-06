@@ -114,8 +114,6 @@ Commit your changes, push to the main branch, and wait until `.github/workflows/
 
 Next Card supports Google Analytics. You just need to set up your id in config.
 
-There are two custom events to track: `link_click` and `contact_click`. Each event reports link title as a `value` parameter.
-
 ## Custom domain
 
 You can [set up a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) for your card.
