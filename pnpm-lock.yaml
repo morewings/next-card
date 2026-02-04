@@ -139,8 +139,8 @@ importers:
         specifier: 7.1.12
         version: 7.1.12(@types/node@24.9.1)(yaml@2.8.1)
       vite-imagetools:
-        specifier: 9.0.0
-        version: 9.0.0(rollup@4.52.5)
+        specifier: 9.0.2
+        version: 9.0.2(rollup@4.52.5)
       vite-plugin-static-copy:
         specifier: 3.1.4
         version: 3.1.4(vite@7.1.12(@types/node@24.9.1)(yaml@2.8.1))
@@ -3227,8 +3227,8 @@ packages:
   vcards-js@2.10.0:
     resolution: {integrity: sha512-nah+xbVInVJaO6+C5PEUqaougmv8BN8aa7ZCtmVQcX6eWIZGRukckFtseXSI7KD7/nXtwkJe624y42T0r+L+AQ==}
 
-  vite-imagetools@9.0.0:
-    resolution: {integrity: sha512-nxTMh7+PkZlOinV1DwgcDAill4+khOF29yQVqYEzleyKEb6qunRDYBYaT9TmGfx4l1fk2xSvDNgbiTYyiekHAw==}
+  vite-imagetools@9.0.2:
+    resolution: {integrity: sha512-FV5DXw4swU81t+g8JOLT+T7gKuBOXuVsZ0WGhi7y0R182+GfBYkcf6V9/T0Nweu/vn1X0DA2p5ePMnaGZlRl1A==}
     engines: {node: '>=20.0.0'}
 
   vite-plugin-static-copy@3.1.4:
@@ -6817,7 +6817,7 @@ snapshots:
 
   vcards-js@2.10.0: {}
 
-  vite-imagetools@9.0.0(rollup@4.52.5):
+  vite-imagetools@9.0.2(rollup@4.52.5):
     dependencies:
       '@rollup/pluginutils': 5.3.0(rollup@4.52.5)
       imagetools-core: 9.1.0
