@@ -26,7 +26,7 @@
     "test:browser": "vitest --config=vitest.browser.config.ts"
   },
   "dependencies": {
-    "@fontsource-variable/rubik": "5.2.8",
+    "@fontsource-variable/rubik": "5.3.0",
     "@phosphor-icons/react": "2.1.10",
     "classnames": "2.5.1",
     "react": "19.3.0",
